@@ -15,3 +15,7 @@ def get_prompts(prompt):
     list_prompts = [prompt[3:] for prompt in list_prompts if prompt and prompt[0].isdigit()]
 
     return list_prompts
+
+if __name__ == '__main__':
+        prompt = 'Good Morning'
+        print(get_prompts(prompt))
