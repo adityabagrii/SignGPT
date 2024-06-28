@@ -5,7 +5,6 @@ from IPython.display import Image
 import warnings as w
 w.filterwarnings("ignore", category=UserWarning)
 
-import os
 import requests
 from torchvision import models, transforms
 from PIL import Image
