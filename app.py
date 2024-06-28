@@ -12,7 +12,11 @@ def submit():
     for file in os.listdir('images'):
         os.remove(f'images/{file}')
     prompt = request.form['prompt']
-    run_model(prompt)
+    prompts = run_model(prompt)
+    # save the prompts in a file
+    with open('./templates/prompts.txt', 'w') as f:
+        for prompt in prompts:
+            f.write(prompt + '\n')
     return redirect(url_for('home'))
 
 if __name__ == '__main__':

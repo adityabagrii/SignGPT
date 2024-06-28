@@ -5,3 +5,4 @@ def run_model(prompt):
     image_prompts = get_prompts(prompt)
     for i, prompt in enumerate(image_prompts):
         get_image(prompt, i)
+    return image_prompts
