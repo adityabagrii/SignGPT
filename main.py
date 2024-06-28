@@ -1,5 +1,9 @@
 from image_gen import get_image
+from sign_lang import get_prompts
 
-prompts = ["A beautiful sunset over the ocean", "A beautiful sunrise over the mountains", "A beautiful sunset over the mountains", "A beautiful sunrise over the ocean"]
-for i, prompt in enumerate(prompts):
+# Getting prompt from user sending it to LLM to convert it into sign language instructions
+prompt = 'I Love You'
+image_prompts = get_prompts(prompt)
+print(image_prompts)
+for i, prompt in enumerate(image_prompts):
     get_image(prompt, i)
