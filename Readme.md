@@ -18,6 +18,7 @@ SignGPT is a web application that converts input text prompts to sign language i
 - Llama 3 API from HuggingFace
 - Stable Diffusion XL API from HuggingFace
 - Flask Library
+- HugginFace Spaces
 - HTML
 - CSS
 - JavaScript
