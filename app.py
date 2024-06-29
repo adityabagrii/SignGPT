@@ -17,7 +17,8 @@ def submit():
     with open('./templates/prompts.txt', 'w') as f:
         for prompt in prompts:
             f.write(prompt + '\n')
-    return redirect(url_for('home'))
+    return render_template('generated.html')
+    # return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
