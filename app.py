@@ -9,16 +9,19 @@ def home():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    for file in os.listdir('images'):
-        os.remove(f'images/{file}')
+    for file in os.listdir('static/images'):
+        os.remove(os.path.join('static/images', file))
     prompt = request.form['prompt']
     prompts = run_model(prompt)
-    # save the prompts in a file
-    with open('./templates/prompts.txt', 'w') as f:
-        for prompt in prompts:
-            f.write(prompt + '\n')
-    return render_template('generated.html')
-    # return redirect(url_for('home'))
+    print(prompts)
+    image_urls = [url_for('static', filename=f'images/{file}') for file in os.listdir('static/images')]
+    image_urls = sorted(image_urls)
+    print(image_urls)
+    params = []
+    for i in range(len(prompts)):
+        params.append({'prompt': prompts[i], 'url': image_urls[i]})
+    print(params)
+    return render_template('generated.html', params=params)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -103,10 +103,16 @@
         </div>
         <p class="genText">Generated result is displayed here. You need to follow these actions to express the requested query in sign language.</p>
         <div class="images">
-            <div class="image-container">
+            <!-- <div class="image-container">
                 <img class="image" src="../images/0.jpg" alt="">
                 <p class="imgText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem earum asperiores a numquam consectetur illum eligendi! Ipsam iusto fuga reprehenderit provident magnam voluptatem libero neque. Explicabo tenetur nesciunt tempore, minus temporibus aspernatur nam, quaerat facilis consectetur hic, recusandae facere fuga laborum! Fugit ut tempore vitae.</p>
+            </div> -->
+            {% for param in params %}
+            <div class="image-container">
+                <img src="{{ param.url }}"  class="image">
+                <p class="imgText">{{ param.prompt }}</p>
             </div>
+            {% endfor %}
         </div>
     </main>
 </body>

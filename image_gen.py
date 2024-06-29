@@ -30,7 +30,7 @@ def query(payload, api_url):
 def get_image(prompt,ind):
     try:
         initial_image_bytes = query({"inputs": prompt}, BASE_API_URL)
-        initial_image_path = f"./images/{ind}.jpg"
+        initial_image_path = f"static/images/{ind}.jpg"
         with open(initial_image_path, "wb") as f:
             f.write(initial_image_bytes)
         display(Image.open(initial_image_path)) 
