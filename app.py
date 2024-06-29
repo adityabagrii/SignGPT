@@ -21,7 +21,7 @@ def submit():
     for i in range(len(prompts)):
         params.append({'prompt': prompts[i], 'url': image_urls[i]})
     print(params)
-    return render_template('generated.html', params=params)
+    return render_template('generated.html', params=params, prompt = prompt)
 
 if __name__ == '__main__':
     app.run()
