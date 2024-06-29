@@ -24,4 +24,4 @@ def submit():
     return render_template('generated.html', params=params)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
