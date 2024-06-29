@@ -89,6 +89,27 @@
         filter: blur(5px);
         opacity: 0.5;
     }
+    .redirect{
+        margin: 0 auto;
+        padding: 1vh 2vh;
+        background-color: white;
+        color: #282828;
+        font-size: 1rem;
+        border: none;
+        border-radius: 1vh;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .redirect:hover{
+        background-color: #282828;
+        color: white;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh auto;
+    }
 </style>
 <body>
     <nav>
@@ -114,6 +135,9 @@
             </div>
             {% endfor %}
         </div>
+        <form action="/" class="btn">
+            <button class="redirect">Click here to generate new prompt</button>
+        </form>
     </main>
 </body>
 </html>
