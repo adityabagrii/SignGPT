@@ -7,6 +7,12 @@ SignGPT is a web application that converts input text prompts to sign language i
 - Uses Stable Diffusion XL to generate images from descriptions.
 - User-friendly web interface.
 
+## Workflow
+1. **Entering the prompt:** You start by entering the prompt in the Text Area given on the home page. After you enter the prompt click the button to submit your request.
+2. **Generating instructions:** After you have submitted the request your prompt is sent to a remotely hosted Llama 3 model hosted using **HuggingFace Spaces** to convert the given prompt into sign language instructions.
+3. **Receiving Prompts:** After the prompts are converted to sign language instructions, these are further refined to extract just the instructions from the additional texts.
+4. **Forwarding Prompts to Image Generation Model:** Once we have the refined prompts we forward them to remotely hosted **Stable Diffusion XL Model** to generate and receive images.
+5. **Displaying Images:** Once we receive the generated images fromt the **SDXL** we pass them dynmaically from backend to frontend and display them with the prompts respectively.
 ## Prerequisites
 - Python
 - Flask
@@ -22,3 +28,6 @@ SignGPT is a web application that converts input text prompts to sign language i
 - HTML
 - CSS
 - JavaScript
+
+## Note
+The accuracy of the images and the prompts are totally dependent on the model used and the fine-tuning of the model. If you want better results from the model you can fine-tune the model on local storage and use them for better results.
