@@ -31,3 +31,8 @@ SignGPT is a web application that converts input text prompts to sign language i
 
 ## Note
 The accuracy of the images and the prompts are totally dependent on the model used and the fine-tuning of the model. If you want better results from the model you can fine-tune the model on local storage and use them for better results.
+
+## Demo
+
+https://github.com/adityabagrii/SignGPT/assets/130608893/c3ad0032-5327-44eb-a150-7672f377459e
+
