@@ -1,19 +1,8 @@
 from config import AUTH_TOKEN
-
 from IPython.display import Image
-
-import warnings as w
-w.filterwarnings("ignore", category=UserWarning)
-
 import requests
-from torchvision import models, transforms
 from PIL import Image
-from basicsr.archs.srvgg_arch import SRVGGNetCompact
-from gfpgan.utils import GFPGANer
-from realesrgan.utils import RealESRGANer
 from IPython.display import display
-import os
-import requests
 
 HUGGING_FACE_API_TOKEN = AUTH_TOKEN
 
